@@ -1,0 +1,21 @@
+# Configuration options can be accessed as
+#   configatron.site_name
+
+development: &local
+    site_name: ElasCAD
+    site_url: elascad.local
+    
+    company_name: Ybsis Inc
+    admin_email: yacin@ybsis.com
+    
+    support_name: Support
+    support_email: support@test.com
+
+production:
+  <<: *local
+  
+staging:
+  <<: *local
+
+test:
+  <<: *local
