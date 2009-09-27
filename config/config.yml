@@ -3,6 +3,7 @@
 
 development: &local
     site_name: ElasCAD
+    tag_line: "Run your application in the Cloud"
     site_url: elascad.local
     
     company_name: Ybsis Inc
