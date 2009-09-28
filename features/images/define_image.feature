@@ -4,11 +4,18 @@ Feature: member defines a new image
   I want to create an image
   So that I can run my application
  
-  Scenario: define image
-    Given I'm logged in
-    When I'm on image/new page
-    Then I should be able to choose a base image from a list
-    And select x11 support
-    And add a tool (xilink etc ..) to the image
-    Then click on "create image"
-    And be presented with a report/progress page
+  Scenario: a member defines image with X11 support
+    Given I'm a member
+    When I create a new image
+    And I choose a base image from a list
+    And I select x11 support
+    And I add a tool (xilink etc ..) to the image
+    Then I should be presented with a report information
+    And I should be notifed of progress
+
+  Scenario: a non member tries to define an image
+    Given I'm not a member
+    When I create a new image
+    Then I should be presented with an error message
+    And I should be see information about how to register
+
