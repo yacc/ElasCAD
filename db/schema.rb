@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091030191712) do
+ActiveRecord::Schema.define(:version => 20091030194816) do
 
   create_table "esbs", :force => true do |t|
     t.string   "name"
@@ -93,6 +93,10 @@ ActiveRecord::Schema.define(:version => 20091030191712) do
     t.string   "server_type"
     t.string   "status"
     t.integer  "data_size"
+    t.integer  "image_id"
+    t.integer  "server_id"
+    t.integer  "home_id"
+    t.integer  "operating_system_id"
   end
 
   create_table "roles", :force => true do |t|

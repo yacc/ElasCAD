@@ -7,7 +7,6 @@ describe Project do
       :name => "value for name",
       :x11 => false,
       :operating_system => operating_systems(:one),
-      :image => images(:one),
       :tools => [tools(:one),tools(:two),tools(:three)],
       :server => servers(:one),
       :data_size => '250', #250Mb
@@ -18,7 +17,6 @@ describe Project do
       :name => "Brand new project",
       :x11 => false,
       :operating_system => operating_systems(:one),
-      :image => nil,
       :tools => [tools(:one),tools(:two),tools(:three)],
       :server => nil,
       :data_size => '250', #250Mb
@@ -31,12 +29,9 @@ describe Project do
     Project.create!(@valid_attributes)
   end
 
-  it "should create new project, define home and attach an image" do
+  it "should create new project and define a home" do
     @p = Project.new(@attributes_new_project)
-    @p.status.should == "New"
-    @p.image.should_not be_nil
     @p.home.should_not be_nil
-    @p.image.should == images(:one)
     @p.home.should == homes(:one)
     @p.status.should == "Ready"
   end

@@ -17,7 +17,7 @@ describe OperatingSystem do
     OperatingSystem.create!(@valid_attributes)
   end
 
-  it "should attach an image that amtches the OS specs" do
+  it "should attach an image that matches the OS specs" do
      @os = OperatingSystem.new(@valid_attributes)
      @os.image = images(:one)
   end
