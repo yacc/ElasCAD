@@ -4,7 +4,7 @@ Feature: member defines a new image
   I want to create an image
   So that I can create a project
   And run my application with my data
- 
+
   Scenario: a member defines an image with X11 support
     Given I'm a member
     When I create a new image

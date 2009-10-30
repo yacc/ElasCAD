@@ -9,7 +9,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081023115224) do
+ActiveRecord::Schema.define(:version => 20091030191712) do
+
+  create_table "esbs", :force => true do |t|
+    t.string   "name"
+    t.integer  "size"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "homes", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "size"
+  end
+
+  create_table "images", :force => true do |t|
+    t.string   "name"
+    t.string   "ami"
+    t.boolean  "x11"
+    t.string   "os"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "instances", :force => true do |t|
+    t.string   "name"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "open_id_authentication_associations", :force => true do |t|
     t.integer "issued"
@@ -26,6 +57,25 @@ ActiveRecord::Schema.define(:version => 20081023115224) do
     t.string  "salt",       :null => false
   end
 
+  create_table "operating_systems", :force => true do |t|
+    t.string   "name"
+    t.string   "version"
+    t.string   "release"
+    t.string   "provider"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "bit_type"
+  end
+
+  create_table "os", :force => true do |t|
+    t.string   "name"
+    t.string   "version"
+    t.string   "release"
+    t.string   "provider"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"
     t.string   "real_name"
@@ -33,6 +83,16 @@ ActiveRecord::Schema.define(:version => 20081023115224) do
     t.string   "website"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.boolean  "x11"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "server_type"
+    t.string   "status"
+    t.integer  "data_size"
   end
 
   create_table "roles", :force => true do |t|
@@ -44,12 +104,36 @@ ActiveRecord::Schema.define(:version => 20081023115224) do
     t.integer "user_id"
   end
 
+  create_table "s3_snapshots", :force => true do |t|
+    t.string   "name"
+    t.string   "snapshot_status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "servers", :force => true do |t|
+    t.string   "name"
+    t.string   "server_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "settings", :force => true do |t|
     t.string   "label"
     t.string   "identifier"
     t.text     "description"
     t.string   "field_type",  :default => "string"
     t.text     "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tools", :force => true do |t|
+    t.string   "name"
+    t.string   "vendor"
+    t.string   "license_key"
+    t.string   "license_server"
+    t.string   "s3_snapshot"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

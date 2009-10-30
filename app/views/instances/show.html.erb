@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @instance.name %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @instance.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_instance_path(@instance) %> |
+<%= link_to 'Back', instances_path %>

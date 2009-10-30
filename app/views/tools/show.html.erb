@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @tool.name %>
+</p>
+
+<p>
+  <b>Vendor:</b>
+  <%=h @tool.vendor %>
+</p>
+
+<p>
+  <b>License key:</b>
+  <%=h @tool.license_key %>
+</p>
+
+<p>
+  <b>License server:</b>
+  <%=h @tool.license_server %>
+</p>
+
+<p>
+  <b>S3 snapshot:</b>
+  <%=h @tool.s3_snapshot %>
+</p>
+
+
+<%= link_to 'Edit', edit_tool_path(@tool) %> |
+<%= link_to 'Back', tools_path %>

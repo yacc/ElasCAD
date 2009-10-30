@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @esb.name %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%=h @esb.size %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @esb.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_esb_path(@esb) %> |
+<%= link_to 'Back', esbs_path %>

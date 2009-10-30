@@ -1,0 +1,22 @@
+<h1>Listing s3_snapshots</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Snapshot status</th>
+  </tr>
+
+<% for s3_snapshot in @s3_snapshots %>
+  <tr>
+    <td><%=h s3_snapshot.name %></td>
+    <td><%=h s3_snapshot.snapshot_status %></td>
+    <td><%= link_to 'Show', s3_snapshot %></td>
+    <td><%= link_to 'Edit', edit_s3_snapshot_path(s3_snapshot) %></td>
+    <td><%= link_to 'Destroy', s3_snapshot, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New s3_snapshot', new_s3_snapshot_path %>

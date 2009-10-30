@@ -1,5 +1,14 @@
 # See how all your routes lay out with "rake routes"
 ActionController::Routing::Routes.draw do |map|
+  map.resources :operating_systems
+  map.resources :s3_snapshots
+  map.resources :homes
+  map.resources :servers
+  map.resources :esbs
+  map.resources :tools
+  map.resources :images
+  map.resources :instances
+  map.resources :projects
   
   # RESTful rewrites
   

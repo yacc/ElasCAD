@@ -1,0 +1,24 @@
+<h1>Listing esbs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Size</th>
+    <th>Status</th>
+  </tr>
+
+<% for esb in @esbs %>
+  <tr>
+    <td><%=h esb.name %></td>
+    <td><%=h esb.size %></td>
+    <td><%=h esb.status %></td>
+    <td><%= link_to 'Show', esb %></td>
+    <td><%= link_to 'Edit', edit_esb_path(esb) %></td>
+    <td><%= link_to 'Destroy', esb, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New esb', new_esb_path %>

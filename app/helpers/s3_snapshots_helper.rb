@@ -1,0 +1,2 @@
+module S3SnapshotsHelper
+end

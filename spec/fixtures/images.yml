@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: "Ubuntu Jaunty 32bit"
+  ami: "ami-ccf615a5"
+  x11: false
+  os: "Ubuntu 9.04 Jaunty"
+
+two:
+  name: "Ubuntu 9.04 Jaunty 64-bit"
+  ami: "ami-eef61587"
+  x11: false
+  os: "Ubuntu 9.04 Jaunty"

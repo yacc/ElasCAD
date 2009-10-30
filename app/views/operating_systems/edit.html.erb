@@ -1,0 +1,28 @@
+<h1>Editing operating_system</h1>
+
+<% form_for(@operating_system) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :version %><br />
+    <%= f.text_field :version %>
+  </p>
+  <p>
+    <%= f.label :release %><br />
+    <%= f.text_field :release %>
+  </p>
+  <p>
+    <%= f.label :provider %><br />
+    <%= f.text_field :provider %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @operating_system %> |
+<%= link_to 'Back', operating_systems_path %>

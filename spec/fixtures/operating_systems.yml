@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  version: MyString
+  release: MyString
+  provider: MyString
+  bit_type: '32bit'
+
+two:
+  name: MyString
+  version: MyString
+  release: MyString
+  provider: MyString
+  bit_type: '64bit'

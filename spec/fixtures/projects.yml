@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: 'Project with X11'
+  x11: true
+
+two:
+  name: 'Project without X11'
+  x11: false

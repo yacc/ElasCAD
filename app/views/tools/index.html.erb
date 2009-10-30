@@ -1,0 +1,28 @@
+<h1>Listing tools</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Vendor</th>
+    <th>License key</th>
+    <th>License server</th>
+    <th>S3 snapshot</th>
+  </tr>
+
+<% for tool in @tools %>
+  <tr>
+    <td><%=h tool.name %></td>
+    <td><%=h tool.vendor %></td>
+    <td><%=h tool.license_key %></td>
+    <td><%=h tool.license_server %></td>
+    <td><%=h tool.s3_snapshot %></td>
+    <td><%= link_to 'Show', tool %></td>
+    <td><%= link_to 'Edit', edit_tool_path(tool) %></td>
+    <td><%= link_to 'Destroy', tool, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tool', new_tool_path %>

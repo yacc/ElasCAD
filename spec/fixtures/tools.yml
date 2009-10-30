@@ -1,0 +1,22 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  vendor: MyString
+  license_key: MyString
+  license_server: MyString
+  s3_snapshot: MyString
+
+two:
+  name: MyString
+  vendor: MyString
+  license_key: MyString
+  license_server: MyString
+  s3_snapshot: MyString
+
+three:
+  name: MyString
+  vendor: MyString
+  license_key: MyString
+  license_server: MyString
+  s3_snapshot: MyString

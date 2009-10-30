@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @s3_snapshot.name %>
+</p>
+
+<p>
+  <b>Snapshot status:</b>
+  <%=h @s3_snapshot.snapshot_status %>
+</p>
+
+
+<%= link_to 'Edit', edit_s3_snapshot_path(@s3_snapshot) %> |
+<%= link_to 'Back', s3_snapshots_path %>

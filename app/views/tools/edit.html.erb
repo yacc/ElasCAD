@@ -1,0 +1,32 @@
+<h1>Editing tool</h1>
+
+<% form_for(@tool) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :vendor %><br />
+    <%= f.text_field :vendor %>
+  </p>
+  <p>
+    <%= f.label :license_key %><br />
+    <%= f.text_field :license_key %>
+  </p>
+  <p>
+    <%= f.label :license_server %><br />
+    <%= f.text_field :license_server %>
+  </p>
+  <p>
+    <%= f.label :s3_snapshot %><br />
+    <%= f.text_field :s3_snapshot %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @tool %> |
+<%= link_to 'Back', tools_path %>
